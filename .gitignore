@@ -1,0 +1,19 @@
+# packages
+node_modules/
+
+# build folder
+dist/
+
+# lock files
+yarn.lock
+package-lock.json
+
+# other
+src/_design
+.vscode/
+.DS_Store
+.cache/
+.idea
+
+_design/
+

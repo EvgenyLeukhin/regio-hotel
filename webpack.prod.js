@@ -29,13 +29,7 @@ module.exports = {
 
   // input-output
   entry: {
-    about:     `${jsPath}/about.js`,
-    cinema:    `${jsPath}/cinema.js`,
-    contacts:  `${jsPath}/contacts.js`,
-    corporate: `${jsPath}/corporate.js`,
     index:     `${jsPath}/index.js`,
-    market:    `${jsPath}/market.js`,
-    servicies: `${jsPath}/servicies.js`,
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -118,54 +112,6 @@ module.exports = {
       filename: 'index.html',
       minify: minifyHtmlOptions,
       chunks: ['index']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | О нас',
-      template: `${htmlPath}/about.html`,
-      filename: 'about.html',
-      minify: minifyHtmlOptions,
-      chunks: ['about']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Игровое кино',
-      template: `${htmlPath}/cinema.html`,
-      filename: 'cinema.html',
-      minify: minifyHtmlOptions,
-      chunks: ['cinema']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Контакты',
-      template: `${htmlPath}/contacts.html`,
-      filename: 'contacts.html',
-      minify: minifyHtmlOptions,
-      chunks: ['contacts']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Корпоративное кино',
-      template: `${htmlPath}/corporate.html`,
-      filename: 'corporate.html',
-      minify: minifyHtmlOptions,
-      chunks: ['corporate']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Реклама',
-      template: `${htmlPath}/market.html`,
-      filename: 'market.html',
-      minify: minifyHtmlOptions,
-      chunks: ['market']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Наши услуги',
-      template: `${htmlPath}/servicies.html`,
-      filename: 'servicies.html',
-      minify: minifyHtmlOptions,
-      chunks: ['servicies']
     }),
 
     // css-bundle

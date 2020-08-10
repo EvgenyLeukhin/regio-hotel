@@ -22,13 +22,7 @@ module.exports = {
 
   // input-output
   entry: {
-    about:     `${jsPath}/about.js`,
-    cinema:    `${jsPath}/cinema.js`,
-    contacts:  `${jsPath}/contacts.js`,
-    corporate: `${jsPath}/corporate.js`,
-    index:     `${jsPath}/index.js`,
-    market:    `${jsPath}/market.js`,
-    servicies: `${jsPath}/servicies.js`,
+    index: `${jsPath}/index.js`,
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -86,55 +80,6 @@ module.exports = {
       filename: 'index.html',
       chunks: ['index']
     }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | О нас',
-      favicon: `${favIconPath}/favicon.ico`,
-      template: `${htmlPath}/about.html`,
-      filename: 'about.html',
-      chunks: ['about']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Игровое кино',
-      favicon: `${favIconPath}/favicon.ico`,
-      template: `${htmlPath}/cinema.html`,
-      filename: 'cinema.html',
-      chunks: ['cinema']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Контакты',
-      favicon: `${favIconPath}/favicon.ico`,
-      template: `${htmlPath}/contacts.html`,
-      filename: 'contacts.html',
-      chunks: ['contacts']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Корпоративное кино',
-      favicon: `${favIconPath}/favicon.ico`,
-      template: `${htmlPath}/corporate.html`,
-      filename: 'corporate.html',
-      chunks: ['corporate']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Реклама',
-      favicon: `${favIconPath}/favicon.ico`,
-      template: `${htmlPath}/market.html`,
-      filename: 'market.html',
-      chunks: ['market']
-    }),
-
-    new HtmlWebpackPlugin({
-      title: 'Картина мира | Наши услуги',
-      favicon: `${favIconPath}/favicon.ico`,
-      template: `${htmlPath}/servicies.html`,
-      filename: 'servicies.html',
-      chunks: ['servicies']
-    }),
-
 
     // add jQuery
     new webpack.ProvidePlugin({

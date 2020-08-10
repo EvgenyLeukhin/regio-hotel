@@ -25,16 +25,16 @@ const htmlPath = `${__dirname}/src/html`;
 const favIconPath = './src/img/icons';
 
 module.exports = {
-  mode: 'production',
+  mode: "production",
 
   // input-output
   entry: {
-    index:     `${jsPath}/index.js`,
+    index: `${jsPath}/index.js`,
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle-[hash:8].js',
-    publicPath: ''
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name].bundle-[hash:8].js",
+    publicPath: "",
   },
 
   module: {
@@ -43,7 +43,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: 'babel-loader'
+        use: "babel-loader",
       },
 
       // CSS //
@@ -51,30 +51,32 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader'
-        ]
+          "css-loader",
+          "postcss-loader",
+          "sass-loader",
+        ],
       },
 
       // FONTS //
       {
         test: /\.(ttf|woff|woff2)$/,
-        use: [{
-          loader: 'file-loader',
-          options: { name: 'fonts/[name]-[hash:8].[ext]' }
-        }]
+        use: [
+          {
+            loader: "file-loader",
+            options: { name: "fonts/[name]-[hash:8].[ext]" },
+          },
+        ],
       },
 
       // IMAGES //
       {
         test: /\.(png|jp(e*)g|gif|svg)$/,
         use: [
-          { loader: 'url-loader',           options: { limit: 10000 } },
-          { loader: 'image-webpack-loader', options: { bypassOnDebug: true } }
-        ]
+          { loader: "url-loader", options: { limit: 10000 } },
+          { loader: "image-webpack-loader", options: { bypassOnDebug: true } },
+        ],
       },
-    ]
+    ],
   },
 
   optimization: {
@@ -88,10 +90,10 @@ module.exports = {
         parallel: true,
         uglifyOptions: {
           warnings: false,
-          output: { comments: false }
-        }
+          output: { comments: false },
+        },
       }),
-    ]
+    ],
   },
 
   plugins: [
@@ -101,38 +103,38 @@ module.exports = {
     // remove 'dist/' before new build
     new CleanWebpackPlugin(),
 
-     // gzip compression
-    new CompressionPlugin({ algorithm: 'gzip' }),
+    // gzip compression
+    new CompressionPlugin({ algorithm: "gzip" }),
 
     // HTML - MPA //
     // index.html
     new HtmlWebpackPlugin({
-      title: 'Картина мира | Главная',
+      title: "Rogio Hotel | Home",
       template: `${htmlPath}/index.html`,
-      filename: 'index.html',
+      filename: "index.html",
       minify: minifyHtmlOptions,
-      chunks: ['index']
+      chunks: ["index"],
     }),
 
     // css-bundle
-    new MiniCssExtractPlugin({ filename: '[name].bundle-[hash:8].css' }),
+    new MiniCssExtractPlugin({ filename: "[name].bundle-[hash:8].css" }),
 
     // add jQuery
-    new webpack.ProvidePlugin({ $: 'jquery', jQuery: 'jquery' }),
+    new webpack.ProvidePlugin({ $: "jquery", jQuery: "jquery" }),
 
     // IMAGES, FONTS, robot.txt
     new CopyWebpackPlugin([
-      { from: 'src/img',   to: 'img' },
-      { from: 'robots.txt', to: '' },
+      { from: "src/img", to: "img" },
+      { from: "robots.txt", to: "" },
     ]),
 
     // add favicons
     new FaviconsWebpackPlugin({
       logo: `${favIconPath}/favicon.png`,
-      publicPath: './',
-      prefix: '',
-      statsFilename: 'iconstats-[hash:8].json',
-      background: '#fff'
+      publicPath: "./",
+      prefix: "",
+      statsFilename: "iconstats-[hash:8].json",
+      background: "#fff",
     }),
-  ]
+  ],
 };

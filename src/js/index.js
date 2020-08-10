@@ -1,5 +1,5 @@
 // import scss file
-import '../scss/pages/index.scss';
+import '../scss/styles.scss';
 
 // jq-code
 $(document).ready(() => {

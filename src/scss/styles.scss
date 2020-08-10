@@ -1,0 +1,27 @@
+@import "vars";
+@import "fonts";
+
+// layout
+@import "layout/bootstrap-reboot";
+@import "layout/header";
+@import "layout/footer";
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+main {
+  min-height: 882px;
+}
+
+.container {
+  width: $container-desktop-width;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  outline: 1px solid red;
+}
+
+.user-block {
+
+}

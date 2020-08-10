@@ -74,7 +74,7 @@ module.exports = {
 
     // HTML - MPA //
     new HtmlWebpackPlugin({
-      title: 'Картина мира | Главная',
+      title: 'Rogio Hotel | Home',
       favicon: `${favIconPath}/favicon.ico`,
       template: `${htmlPath}/index.html`,
       filename: 'index.html',

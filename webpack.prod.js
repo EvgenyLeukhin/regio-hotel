@@ -130,7 +130,7 @@ module.exports = {
 
     // add favicons
     new FaviconsWebpackPlugin({
-      logo: `${favIconPath}/favicon.png`,
+      logo: `${favIconPath}/favicon.jpg`,
       publicPath: "./",
       prefix: "",
       statsFilename: "iconstats-[hash:8].json",

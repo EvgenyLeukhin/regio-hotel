@@ -5,13 +5,31 @@
 @import "layout/bootstrap-reboot";
 @import "layout/header";
 @import "layout/footer";
+@import "content-block";
 
 body {
   font-family: 'Roboto', sans-serif;
+  position: relative;
+
+  &.js-overlay {
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0, .85);
+    }
+  }
 }
 
+// main content block
 main {
-  min-height: 882px;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
 
 .container {
@@ -19,9 +37,17 @@ main {
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
-  outline: 1px solid red;
 }
 
-.user-block {
+@media (max-width: $tablet-bp) {
+  .container {
+    width: 100%;
+  }
+}
 
+@media (max-width: $mobile-bp) {
+  main {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 }

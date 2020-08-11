@@ -11,6 +11,12 @@
   <header class="header">
     <div class="container">
       <nav>
+        <a href="#" class="burger-btn  js-burger-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </a>
+
         <a href="#" class="logo"></a>
 
         <ul class="menu">
@@ -55,10 +61,67 @@
           </li>
         </ul>
 
+        <ul class="mobile-menu  js-mobile-menu">
+          <li>
+            <a class="sub-menu-link  js-mobile-submenu-link" href="#">
+              <span>Hotels</span>
+              <div class="arrow"></div>
+            </a>
+            <ul class="sub-menu  js-mobile-submenu">
+              <li><a href="#">Hotel&nbsp;1</a></li>
+              <li><a href="#">Hotel&nbsp;2</a></li>
+              <li><a href="#">Hotel&nbsp;3</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Urlaubsanfebote</a></li>
+
+          <li>
+            <a class="sub-menu-link  js-mobile-submenu-link" href="#">
+              <span>Urlaubsregionen</span>
+              <div class="arrow"></div>
+            </a>
+            <ul class="sub-menu  js-mobile-submenu">
+              <li><a href="#">Urlaubsregionen&nbsp;1</a></li>
+              <li><a href="#">Urlaubsregionen&nbsp;2</a></li>
+              <li><a href="#">Urlaubsregionen&nbsp;3</a></li>
+            </ul>
+          </li>
+
+          <li>
+            <a class="sub-menu-link  js-mobile-submenu-link" href="#">
+              <span>Hotelnews</span>
+              <div class="arrow"></div>
+            </a>
+            <ul class="sub-menu  js-mobile-submenu">
+              <li><a href="#">Hotelnew&nbsp;1</a></li>
+              <li><a href="#">Hotelnew&nbsp;2</a></li>
+              <li><a href="#">Hotelnew&nbsp;3</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Karriere</a></li>
+
+          <li>
+            <a class="sub-menu-link  js-mobile-submenu-link" href="#">
+              <span>Konto</span>
+              <div class="arrow"></div>
+            </a>
+            <ul class="sub-menu  js-mobile-submenu">
+              <li><a href="#">Konto&nbsp;1</a></li>
+              <li><a href="#">Konto&nbsp;2</a></li>
+              <li><a href="#">Konto&nbsp;3</a></li>
+            </ul>
+          </li>
+        </ul>
+
         <div class="user-block">
-          <div class="avatar"></div>
-          <a href="#" class="name">John Smith</a>
-          <div class="flag"></div>
+          <a href="#" class="user-block__link">
+            <div class="avatar" style="background-image: url(../img/icons/user.svg);"></div>
+            <span>John Smith</span>
+          </a>
+
+          <div class="user-block__flag" style="background-image: url(../img/flag.svg);"></div>
         </div>
       </nav>
     </div>
@@ -67,8 +130,24 @@
   <main>
     <div class="container">
       <section class="top">
-        <h1>Kostenfreies Ebook sichern</h1>
-        <p>Urlaub geht immer – profitieren Sie von  unserem Insiderwissen über den Harz</p>
+        <h1>Kostenfreies<br>Ebook sichern</h1>
+        <p>Urlaub geht immer – profitieren Sie von<br>unserem Insiderwissen&nbsp;&nbsp;über den Harz</p>
+
+        <form action="" method="post" class="form">
+          <fieldset>
+            <label for="form__email">Hier „die 20 besten Ausflugstipps im Harz“ erhalten</label>
+            <input type="email" name="form__email" id="form__email" placeholder="Email" required>
+          </fieldset>
+
+          <fieldset class="custom-checkbox">
+            <input type="checkbox" name="form__checkbox" id="form__checkbox" hidden>
+            <label for="form__checkbox">Ja, ich habe die Datenschutzerklärung gelesen.</label>
+          </fieldset>
+
+          <fieldset>
+            <input type="submit" name="form__submit" id="form__submit" value="Newsletter abonnieren">
+          </fieldset>
+        </form>
       </section>
 
       <section class="content">

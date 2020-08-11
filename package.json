@@ -1,16 +1,16 @@
 {
-  "name": "kartina-mira",
+  "name": "regio-hotel",
   "version": "1.0.0",
   "description": "Build MPA with Webpack",
   "main": "package.json",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EvgenyLeukhin/kartina-mira.git"
+    "url": "git+https://github.com/EvgenyLeukhin/regio-hotel.git"
   },
   "bugs": {
-    "url": "https://github.com/EvgenyLeukhin/kartina-mira/issues"
+    "url": "https://github.com/EvgenyLeukhin/regio-hotel/issues"
   },
-  "homepage": "https://github.com/EvgenyLeukhin/kartina-mira",
+  "homepage": "https://github.com/EvgenyLeukhin/regio-hotel",
   "scripts": {
     "start": "webpack-dev-server --config=./webpack.dev.js",
     "build": "webpack --config=./webpack.prod.js",
@@ -33,7 +33,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "izimodal": "^1.5.1",
     "jquery": "^3.4.1"
   },
   "devDependencies": {

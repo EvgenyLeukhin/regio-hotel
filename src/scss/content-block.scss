@@ -1,5 +1,5 @@
 .top {
-  min-height: 812px;
+  min-height: 742px;
   overflow: visible;
   background-repeat: no-repeat;
   background-image: url(../img/image.png);
@@ -52,6 +52,11 @@
         margin-bottom: 16px;
         padding-top: 0;
         padding-bottom: 4px;
+
+        &:focus {
+          outline: none;
+          border: 1px solid #C3281E;
+        }
 
         &::-webkit-input-placeholder {
           color: rgba(0, 0, 0, 0.5);
@@ -168,12 +173,28 @@
 
 @media (max-width: $mobile-bp) {
   .top {
+    h1 {
+      font-size: 30px;
+      line-height: 30px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 23px;
+
+      br { display: none; }
+    }
+
     .form {
+      fieldset:first-child {
+        label {
+          font-size: 16px;
+          line-height: 21px;
+        }
+      }
       // submit
       fieldset:last-child {
-        input {
-          width: 100%;
-        }
+        input { width: 100%; }
       }
     }
   }

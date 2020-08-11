@@ -272,3 +272,14 @@
     }
   }
 }
+
+@media (max-width: 370px) {
+  .header {
+    .user-block {
+      &__link {
+        .avatar { margin-right: 0; }
+        span { display: none; }
+      }
+    }
+  }
+}
